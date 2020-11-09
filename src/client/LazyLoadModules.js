@@ -40,6 +40,7 @@ const LazyLoadModules = (props) => {
       } else {
         console.log('no more data');
         setHasLoaded(false);
+        setLoading(false);
       }
     });
   };

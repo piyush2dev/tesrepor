@@ -2,8 +2,8 @@ import React from 'react';
 import './styles.css';
 import BigPoster from '../BigPoster';
 
-export default function OriginalSeries({ moduleData, variant='new-release' }) {
-  const {title, subtitle='', contentData:posters, } = moduleData;
+export default function OriginalSeries({ moduleData, variant = 'original-series' }) {
+  const { title, subtitle = '', contentData: posters, } = moduleData;
   return (
     <div className="original-series-container">
       <div className="original-series-parent">
