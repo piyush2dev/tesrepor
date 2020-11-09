@@ -1,0 +1,16 @@
+svg.icons {
+    width: 15px;
+}
+
+svg.icons path {
+    fill: #ffffff;
+    fill-rule: evenodd;
+    stroke: #ffffff;
+    stroke-width: 8px;
+}
+
+svg.icons-info-icon {
+    width: 3px;
+}
+
+/*# sourceMappingURL=0.style.css.map*/
