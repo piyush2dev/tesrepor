@@ -18,56 +18,56 @@ export default function BigPoster({ gist, feturedText, variant = 'default' }) {
 
   const imageUrl = gist && gist.imageGist[variantToSize[variant]];
 
-  const placeholderWidth = 20;
+  // const placeholderWidth = 20;
 
-  const placeholderImage = imageUrl
-    ? `${imageUrl}?impolicy=resize&w=${placeholderWidth}&h=${
-        placeholderWidth / imageRatioForSmallSizeLoading[variantToSize[variant]]
-      }`
-    : '';
-  const [imageSrc, setImageSrc] = useState(placeholderImage);
-  const [imageRef, setImageRef] = useState();
-  const setProgressiveImage = (src) => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => setImageSrc(src);
-  };
+  // const placeholderImage = imageUrl
+  //   ? `${imageUrl}?impolicy=resize&w=${placeholderWidth}&h=${
+  //       placeholderWidth / imageRatioForSmallSizeLoading[variantToSize[variant]]
+  //     }`
+  //   : '';
+  // const [imageSrc, setImageSrc] = useState(placeholderImage);
+  // const [imageRef, setImageRef] = useState();
+  // const setProgressiveImage = (src) => {
+  //   const img = new Image();
+  //   img.src = src;
+  //   img.onload = () => setImageSrc(src);
+  // };
 
-  useEffect(() => {
-    let observer;
-    let didCancel = false;
+  // useEffect(() => {
+  //   let observer;
+  //   let didCancel = false;
 
-    if (imageRef && imageSrc === placeholderImage) {
-      if (IntersectionObserver) {
-        observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              // when image is visible in the viewport + rootMargin
-              if (!didCancel && (entry.intersectionRatio > 0 || entry.isIntersecting)) {
-                setProgressiveImage(imageUrl);
-                // setImageSrc(imageSrc);
-              }
-            });
-          },
-          {
-            threshold: 0.01,
-            rootMargin: '20%',
-          }
-        );
-        observer.observe(imageRef);
-      } else {
-        // Old browsers fallback
-        setImageSrc(imageUrl);
-      }
-    }
-    return () => {
-      didCancel = true;
-      // on component unmount, we remove the listner
-      if (observer && observer.unobserve) {
-        observer.unobserve(imageRef);
-      }
-    };
-  });
+  //   if (imageRef && imageSrc === placeholderImage) {
+  //     if (IntersectionObserver) {
+  //       observer = new IntersectionObserver(
+  //         (entries) => {
+  //           entries.forEach((entry) => {
+  //             // when image is visible in the viewport + rootMargin
+  //             if (!didCancel && (entry.intersectionRatio > 0 || entry.isIntersecting)) {
+  //               setProgressiveImage(imageUrl);
+  //               // setImageSrc(imageSrc);
+  //             }
+  //           });
+  //         },
+  //         {
+  //           threshold: 0.01,
+  //           rootMargin: '20%',
+  //         }
+  //       );
+  //       observer.observe(imageRef);
+  //     } else {
+  //       // Old browsers fallback
+  //       setImageSrc(imageUrl);
+  //     }
+  //   }
+  //   return () => {
+  //     didCancel = true;
+  //     // on component unmount, we remove the listner
+  //     if (observer && observer.unobserve) {
+  //       observer.unobserve(imageRef);
+  //     }
+  //   };
+  // });
 
   return (
     <div className={`big-poster-container ${`big-poster-${variant}`}`}>
@@ -75,9 +75,8 @@ export default function BigPoster({ gist, feturedText, variant = 'default' }) {
         <div className="big-poster-parent">
           <div
             className="big-poster-img-container"
-            ref={setImageRef}
             style={{
-              backgroundImage: `url(${imageSrc}), linear-gradient(#212121, #212121)`,
+              backgroundImage: `url(${imageUrl}), linear-gradient(#212121, #212121)`,
             }}
           />
           <div className="big-poster-info-container">

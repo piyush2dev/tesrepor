@@ -1,68 +1,53 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode:'production',
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        include: [
-          path.resolve(__dirname, '../', 'src')
-        ],
+        include: [path.resolve(__dirname, '../', 'src')],
         query: {
-          presets: [
-            "@babel/preset-env",
-            "@babel/preset-react",
-            
-          ],
-          plugins: [
-            "@babel/plugin-proposal-class-properties"
-          ]
-        }
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: ['@babel/plugin-proposal-class-properties'],
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader:'file-loader',
+            loader: 'file-loader',
             options: {
-              name: '[name].html'
+              name: '[name].html',
             },
           },
           'file-loader',
-          "html-loader"
-        ]
+          'html-loader',
+        ],
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      }
-    ]
+        use: ['file-loader'],
+      },
+    ],
   },
   plugins: [
-  //   new UglifyJsPlugin(),
+    //   new UglifyJsPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'css/style.css',
     }),
-    // new CleanWebpackPlugin(['build', 'public'])
+    // new CleanWebpackPlugin(),
     // new HtmlWebpackPlugin({
     //   template: 'src/client/page/index.hbs'
     // })
   ],
   devtool: 'cheap-module-source-map',
-
-}
+};

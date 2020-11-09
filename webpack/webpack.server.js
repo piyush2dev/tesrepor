@@ -3,7 +3,6 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const baseConfig = require('./webpack.common.js');
 
-
 const config = {
   ...baseConfig,
   name: 'server',
@@ -11,24 +10,24 @@ const config = {
   externals: [nodeExternals()],
   entry: {
     server: [
-      "@babel/polyfill",
-      path.resolve(__dirname, '../', 'src', 'server.js')
-    ]
+      '@babel/polyfill',
+      path.resolve(__dirname, '../', 'src', 'server.js'),
+    ],
   },
   output: {
     path: path.resolve(__dirname, '../', 'build'),
-    filename: 'server.js',
+    filename: 'js/server.js',
   },
   devServer: {
-    port: 3002
+    port: 3002,
   },
   node: {
     console: true,
     global: false,
     process: false,
     Buffer: false,
-    __filename: false
-  }
+    __filename: false,
+  },
 };
 
 module.exports = config;

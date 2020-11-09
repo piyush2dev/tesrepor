@@ -5,8 +5,6 @@ const client = redis.createClient({
   host: 'redis-cache',
 });
 
-console.log(client);
-
 const getIntialData = async () => {
   try {
     console.log('CRON - Fetching Data...');

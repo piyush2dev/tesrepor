@@ -10,25 +10,46 @@
 //     "444d92ae-1a0f-4d09-a048-c2329ed0a12c_6":"VideoTiles"
 //   }
 
+// export default {
+//   "0": "Navbar",       // a
+//   "1": "Carousel",     // b
+//   "2": "MoboCarousel", // c
+//   "3": "VideoTiles",   // d
+//   "4": "VideoTiles",   // d
+//   "3": "VideoTiles",   // d
+//   "5": "BigPosters",   // e
+//   "6": "VideoTiles",   // d
+//   // "10": "VideoBanner",
+//   "10": "VideoTiles",  // d
+//   "": "banner",        // f
+//   "3": "VideoTiles",   //d
+//   "4": "VideoTiles",   //d
+//   "5": "BigPosters",   //e
+//   "5": "BigPosters",   // e
+//   "13": "OriginalSeries", // g
+//   "6": "VideoTiles",   // d
+//   "14": "BottomMenuBar", // i
+//   // "16": "Footer" // j
+// }
 
 export default {
-  "0": "Navbar",       // a
-  "1": "Carousel",     // b
-  "2": "MoboCarousel", // c
-  "3": "VideoTiles",   // d
-  "4": "VideoTiles",   // d
-  "3": "VideoTiles",   // d
-  "5": "BigPosters",   // e
-  "6": "VideoTiles",   // d
+  masthead01: 'Navbar',
+  carousel01: 'Carousel',
+  carousel05: 'MoboCarousel',
+  tray02: 'VideoTiles',
+  tray02: 'VideoTiles',
+  tray01: 'VideoTiles',
+  tray04: 'BigPosters',
+  tray02: 'VideoTiles',
+  banner01: 'Banner',
+  tray02: 'VideoTiles',
+  tray02: 'VideoTiles',
   // "10": "VideoBanner",
-  "10": "VideoTiles",  // d
-  "": "banner",        // f
-  "3": "VideoTiles",   //d
-  "4": "VideoTiles",   //d
-  "5": "BigPosters",   //e 
-  "5": "BigPosters",   // e
-  "13": "OriginalSeries", // g
-  "6": "VideoTiles",   // d
-  "14": "BottomMenuBar", // i
-  // "16": "Footer" // j 
-}
+  tray02: 'VideoTiles',
+  tray04: 'BigPosters',
+  tray04: 'BigPosters',
+  carousel03: 'OriginalSeries',
+  tray02: 'VideoTiles',
+  footer02: 'BottomMenuBar',
+  footer04: 'Footer',
+};

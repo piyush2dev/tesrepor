@@ -7,15 +7,17 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:webpack-client": "webpack --config=webpack/webpack.client.js --watch",
     "dev:webpack-server": "webpack --config=webpack/webpack.server.js --watch",
-    "dev:server": "nodemon --watch build --exec \"node build/server.js\"",
-    "build": "npm run build:webpack-server && npm run build:webpack-client && npm run start ",
+    "dev:server": "nodemon --watch build --exec \"node build/js/server.js\"",
+
+    "build": "npm-run-all --parallel build:*",
     "build:webpack-client": "webpack --config=webpack/webpack.client.js",
     "build:webpack-server": "webpack --config=webpack/webpack.client.js",
-    "build:server": "node build/server.js",
+    "build:server": "node build/js/server.js",
+    
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "cronjobs": "node src/page/cron.js",
-    "start": "node build/server.js"
+    "start": "node build/js/server.js"
   },
   "keywords": [],
   "author": "Nishant Raghav",

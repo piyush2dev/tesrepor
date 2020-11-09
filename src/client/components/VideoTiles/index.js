@@ -3,10 +3,10 @@ import './styles.css';
 import VideoTile from '../VideoTile';
 
 export default function VideoTiles({ moduleData, variant='short'}) {
-  if(!moduleData) return null;
+  // if(!moduleData) return null;
 
   const {contentData: tiles, title} = moduleData;
-  console.log(tiles)
+  // console.log(tiles)
 
   return (
     <div className={`video-tiles-parent video-tiles-${variant}`}>

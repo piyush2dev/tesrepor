@@ -1,0 +1,113 @@
+:root {
+    --mobo-carousel-width: 140px;
+}
+
+.mobo-carousel-active-image-container {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.mobo-carousel-indicator-container {
+    overflow-x: auto;
+}
+
+.mobo-carousel-indicator-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mobo-carousel-indicator-list-item {
+    margin-left: 10px;
+    width: var(--mobo-carousel-width);
+    height: calc(var(--mobo-carousel-width) / 1.8);
+    border-radius: 10px;
+    opacity: .8;
+    /* transition: width .5s, height .5s; */
+}
+
+.mobo-carousel-indicator-list-item:last-child {
+    margin-right: 10px;
+}
+
+.mobo-carousel-indicator-list-item.active {
+    --mobo-carousel-width: 200px;
+    opacity: 1;
+}
+
+.mobo-carousel-indicator-list-item.active .mobo-carousel-indicator-image {
+    --mobo-carousel-width: 200px;
+    border: 2px solid #d20820;
+}
+
+.mobo-carousel-indicator-image {
+    width: var(--mobo-carousel-width);
+    height: calc(var(--mobo-carousel-width) / 1.8);
+    border-radius: 10px;
+}
+
+.mobo-carousel-active-image-info-container {
+    margin: 0px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.mobo-carousel-active-info {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.mobo-carousel-heading {
+    font-size: 1.2em;
+    font-family: Inter;
+}
+
+.mobo-carousel-feature-list {
+    list-style: none;
+    display: flex;
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+.mobo-carousel-feature-list>* {
+    color: #b2b2b4;
+    font-family: Inter;
+}
+
+.mobo-carousel-feature-item::after {
+    content: '\2022';
+    margin: 0 5px;
+}
+
+.mobo-carousel-feature-item:last-child::after {
+    content: ''
+}
+
+.mobo-carousel-active-plus-icon svg,
+.mobo-carousel-active-play-icon svg {
+    width: 25px;
+}
+
+.mobo-carousel-active-play-icon svg path {
+    fill: #d20820;
+    stroke: #d20820;
+    stroke-width: 20px;
+}
+
+
+/* ======= hide on desktop ====== */
+
+@media only screen and (min-width: 769px) {
+    .mobo-carousel-container {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=25.style.css.map*/

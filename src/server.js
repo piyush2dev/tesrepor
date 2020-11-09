@@ -19,11 +19,12 @@ app.use(express.static('public'));
 // ====== DB-cache ========
 const client = redis.createClient({
   host: 'redis-cache',
-  port: REDIS_PORT,
 });
 
+//
+
 const renderApp = (data) => {
-  const scripts = ['vendor.js', 'client.js'];
+  const scripts = ['js/vendor.js', 'js/client.js'];
 
   //  const initialState  = data
 

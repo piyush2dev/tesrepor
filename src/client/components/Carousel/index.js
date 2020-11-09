@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CarouselSlide from '../CarouselSlide';
 import './styles.css';
 
-export default function Carousel({moduleData: {contentData:slidesDataArray}}) {
+export default function Carousel({ moduleData: { contentData: slidesDataArray } }) {
   const carousel = React.createRef();
   const [carouselTimmer, setCarouselTimmer] = useState(0);
   const timer = () => setCarouselTimmer((prevTime) => prevTime + 1);
@@ -55,7 +55,7 @@ export default function Carousel({moduleData: {contentData:slidesDataArray}}) {
       <div className="carousel-parent">
         <div className="carousel-mask" ref={carousel}>
           {slidesDataArray &&
-            slidesDataArray.map((slideData) => <CarouselSlide slideData={slideData} />)
+            slidesDataArray.map((slideData, index) => <CarouselSlide slideData={slideData} key={`${index}-carousel-slide`} />)
           }
         </div>
       </div>
