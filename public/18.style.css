@@ -1,0 +1,118 @@
+.banner-container {}
+
+.banner-wrapper {
+    padding: 0px 30px;
+    margin-top: 75px;
+}
+
+.banner-parent {
+    height: 320px;
+    border-radius: 20px;
+    background-image: linear-gradient(102deg, #d20820, #2e024e 99%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-content {
+    padding: 68px 0 68px 50px;
+}
+
+.banner-heading {
+    /* width: 548px; */
+    text-shadow: 0 2px 2px #000000;
+    font-family: Inter;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.banner-sub-heading {
+    /* width: 656px;
+    height: 24px; */
+    opacity: 0.8;
+    font-family: Inter;
+    font-size: 1em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f8f8f8;
+    margin-top: 20px;
+}
+
+.banner-cta {
+    width: 188px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #d20820;
+    margin-top: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.banner-cta:hover {
+    background-color: #dadada;
+}
+
+.banner-image-container {}
+
+.banner-image {
+    /* width: 821px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 14px; */
+    /* width: 821px; */
+    height: 320px;
+    object-fit: contain;
+}
+
+.banner-mobo-icon-container {
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .banner-parent {
+        height: auto;
+        padding: 15px;
+    }
+    .banner-content {
+        padding: 0;
+    }
+    .banner-heading {
+        font-size: 1.2em;
+    }
+    .banner-sub-heading {
+        font-size: 0.8em;
+    }
+    .banner-cta {
+        display: none;
+    }
+    .banner-image {
+        display: none;
+    }
+    .banner-mobo-icon-container {
+        display: block;
+    }
+    .banner-mobo-icon-container svg {
+        width: 20px
+    }
+}
+
+/*# sourceMappingURL=18.style.css.map*/

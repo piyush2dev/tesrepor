@@ -1,0 +1,318 @@
+.big-posters-parent {
+    padding: 0 0px;
+}
+
+.big-posters-heading {
+    margin-left: 30px;
+    margin-top: 75px;
+}
+
+.big-posters-heading::after {
+    content: ' ';
+    background-image: url(613ed83fd1a72dd8e9c8b850d29eee5f.svg);
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.big-posters-subheading {
+    margin-left: 7px;
+    margin-top: 10px;
+    font-family: Inter-BETA;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #f8f8f8;
+}
+
+.big-posters {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* padding: 10px 0; */
+}
+
+.big-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.big-posters {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media (max-width:769px) {
+    .big-posters {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        /* will-change: transform; */
+    }
+}
+:root {
+    --big-poster-series-reviced-width: 300px;
+}
+
+.big-poster-container {
+    margin-top: 30px;
+}
+
+.big-poster-container:first-child {
+    margin-left: 30px;
+}
+
+.big-poster-img-container {
+    width: 300px;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    transition: all .5s;
+}
+
+.big-poster-parent {
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+    transition: all .5s;
+}
+
+.big-poster-container:first-child .big-poster-parent {
+    transform-origin: 0px center;
+}
+
+.big-poster-info-container {
+    background-image: linear-gradient(360deg, black, black, transparent);
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+.big-poster-title {
+    font-size: 24px;
+    font-family: "Neology"
+}
+
+.big-poster-feature-list {
+    list-style: none;
+    display: flex;
+    font-size: 12px;
+}
+
+.big-poster-feature-list li:after {
+    content: '\2022';
+    margin: 0 5px;
+}
+
+.big-poster-feature-list li:last-child:after {
+    content: '';
+}
+
+.big-poster-featured-text {
+    border-radius: 4px;
+    position: relative;
+    font-size: 8px;
+    padding: 4px 10px;
+    margin: 10px 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.big-poster-container.big-poster-default .big-poster-wrapper:hover .big-poster-parent {
+    /* overflow: auto; */
+    transform: scale(1.10);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.big-poster-description {
+    font-size: 10px;
+    font-weight: 300;
+    display: none;
+}
+
+.big-poster-additional-info {
+    display: none;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.big-poster-container.big-poster-default .big-poster-wrapper:hover .big-poster-additional-info {
+    display: block;
+    opacity: 1;
+}
+
+.big-poster-buttons {
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin: 6px 0;
+}
+
+.big-poster-buttons>div {
+    cursor: pointer;
+}
+
+.big-poster-play-button {
+    display: flex;
+    padding: 5px 15px;
+    background: var(--primary-background-color);
+    border-radius: 6px;
+}
+
+.big-poster-play-icon,
+.big-poster-info-icon,
+.big-poster-plus-icon {
+    /* width: 15px */
+}
+
+.big-poster-play-icon path,
+.big-poster-info-icon path,
+.big-poster-plus-icon path {
+    fill: #ffffff;
+    fill-rule: evenodd;
+    /* stroke-width: 8px;
+    stroke: #ffffff; */
+}
+
+.big-poster-play-text {
+    font-size: 12px;
+}
+
+.big-poster-info-button,
+.big-poster-plus-button {
+    display: flex;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 10px;
+    border: solid 1px #343434;
+    background-color: rgba(11, 12, 14, 0.7);
+}
+
+.big-poster-info-button {
+    padding: 5px 15px;
+}
+
+.big-poster-series {
+    margin: 20px 20px 20px 0;
+}
+
+.big-poster-series .big-poster-img-container {
+    width: var(--big-poster-series-reviced-width);
+    height: calc(var(--big-poster-series-reviced-width) / 1.77);
+}
+
+.big-poster-series .big-poster-parent {
+    height: auto;
+    border-radius: 10px;
+}
+
+.big-poster-series .big-poster-title {
+    font-family: Inter;
+    font-size: 1em;
+    font-weight: 600;
+    color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+.big-poster-series .big-poster-info-container {
+    background-image: linear-gradient(to bottom, rgba(21, 22, 25, 0) -8%, #000000);
+}
+
+.big-poster-new-release {
+    width: 100%;
+    /* padding: 0 7px; */
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.big-poster-new-release .big-poster-parent {
+    border-radius: 10px;
+    height: 436px;
+}
+
+.big-poster-new-release .big-poster-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.big-poster-new-release .big-poster-parent .big-poster-additional-info {
+    display: block;
+    opacity: 1;
+}
+
+.big-poster-new-release .big-poster-info-container {
+    padding: 30px;
+    background-image: linear-gradient(to bottom, rgba(21, 22, 25, 0) -8%, #000000);
+}
+
+.big-poster-new-release .big-poster-title {
+    text-shadow: 0 2px 2px #000000;
+    font-family: Inter;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.big-poster-original-series .big-poster-parent {
+    --big-poster-original-series-width: 400px;
+    width: var(--big-poster-original-series-width);
+    height: calc(var(--big-poster-original-series-width) / 1.77);
+    border-radius: 10px;
+    opacity: .4;
+}
+
+.big-poster-original-series .big-poster-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.big-poster-original-series .big-poster-wrapper:hover .big-poster-parent {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.big-poster-original-series .big-poster-info-container {
+    display: none;
+    background-image: linear-gradient(to bottom, rgba(21, 22, 25, 0) -8%, #000000);
+}
+
+.big-poster-original-series .big-poster-wrapper:hover .big-poster-additional-info,
+.big-poster-original-series .big-poster-wrapper:hover .big-poster-info-container {
+    display: block;
+    opacity: 1;
+}
+
+.big-poster-original-series .big-poster-title {
+    text-shadow: 0 2px 2px #000000;
+    font-family: Inter;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.big-poster-original-series .big-poster-feature-list {
+    font-family: Inter;
+    font-size: .6em;
+}
+
+.big-poster-original-series {
+    margin-left: 10px;
+    margin-bottom: 104px;
+}
+
+/*# sourceMappingURL=1.style.css.map*/

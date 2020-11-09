@@ -1,0 +1,87 @@
+.video-tiles-parent {
+    padding: 0 0px;
+}
+
+.video-tiles-heading {
+    margin-left: 30px;
+    margin-top: 75px;
+    margin-bottom: -20px;
+    /* font-size: 24px;
+    font-weight: bold; */
+}
+
+.video-tiles-heading::after {
+    content: ' ';
+    background-image: url(../../assets//images/next.svg);
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.video-tiles {
+    display: flex;
+    flex-direction: row;
+    /* overflow-x: auto; */
+    /* will-change: transform; */
+}
+
+.video-tiles::-webkit-scrollbar {
+    display: none;
+}
+
+.video-tiles {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+    margin-bottom: -100px;
+}
+
+
+/* ==== variant search */
+
+.video-tiles-search {
+    padding: 0;
+}
+
+.video-tiles-search .video-tiles-heading {
+    font-size: 1.5em;
+}
+
+.video-tiles-search .video-tiles-heading::after {
+    display: none;
+}
+
+.video-tiles-search .video-tiles {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+
+/* here accessing child (VideoTile component) property */
+
+.video-tiles-search .video-tile-container {
+    margin: 40px 0px 0px 7px;
+}
+
+@media (max-width:769px) {
+    .video-tiles {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        /* will-change: transform; */
+    }
+    .video-tiles-search .video-tiles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .search-layout-search-result-tab-container {
+        justify-content: center;
+    }
+    .search-layout-search-result-tab-container li {
+        width: 100%;
+        text-align: center;
+    }
+}

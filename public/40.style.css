@@ -1,0 +1,78 @@
+:root {
+    --carousel-height-calc_value: 1.78;
+}
+
+.carousel-mask {
+    /* width: 100vw; */
+    height: calc(100vw / var(--carousel-height-calc_value));
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.first-slide {
+    animation: slideOut 5s ease-in-out normal;
+}
+
+.second-slide {
+    animation: slideIn 5s ease-in-out normal;
+    opacity: 1;
+}
+
+@keyframes slideOut {
+    0% {
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+    50% {
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+    99.999% {
+        left: -100%;
+        z-index: 1;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        left: 100%;
+        z-index: 1;
+        opacity: 1;
+    }
+    50% {
+        left: 100%;
+        z-index: 1;
+        opacity: 1;
+    }
+    99.999% {
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+    100% {
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+    }
+}
+
+
+/* ========= RESPONSIVE ========== */
+
+@media only screen and (max-width: 769px) {
+    .carousel-parent {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=40.style.css.map*/

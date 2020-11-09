@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  main-server:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - .:/app
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+  redis-cache:
+    image: 'redis'
+
+  corn-job:
+    build: .
+    volumes:
+      - /app/node_modules
+      - .:/app
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '3'
+    command: ['npm', 'run', 'cronjobs']
